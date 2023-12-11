@@ -11,7 +11,6 @@ async function processFile(filePath: string): Promise<number> {
             sum += parseInt(firstDigit + lastDigit);
         }
     }
-
     return sum;
 }
 

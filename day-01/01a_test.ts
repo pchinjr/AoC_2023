@@ -8,14 +8,14 @@ async function createTempFile(content: string): Promise<string> {
 }
 
 Deno.test({
-  name: "Process File - Example 1",
+  name: "Process Text - Part 1",
   async fn() {
     const tempFilePath = await createTempFile(`1abc2
     pqr3stu8vwx
     a1b2c3d4e5f
     treb7uchet`);
     const output = await processFile(tempFilePath);
-    assertEquals(output, 15);
+    assertEquals(output, 142);
     await Deno.remove(tempFilePath);
   },
 });
